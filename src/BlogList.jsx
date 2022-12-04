@@ -1,8 +1,5 @@
-const BlogList = (props) => {
-    const blogs = props.blogs;
-    // console.log(blogs, props.Blog);
-    const title = props.title;
-
+const BlogList = ({ blogs, title}) => {
+   
     return ( 
         <div className="blog-list">
             <h2>{ title }</h2>
