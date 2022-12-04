@@ -1,22 +1,31 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
+import { BrowserRouter as Router,Route, Switch } from 'react-router-dom';
 import Navbar from './NavBar';
 import Home from './Home';
+import Create from './Create';
 function App() {
   
   
   return (
-    <div className="App">
-      <Navbar />
-      
-      <div className="container"></div>
-      <div className="content">
-      <Home />
-      
-      </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        
+        <div className="container"></div>
+        <div className="content">
+      < Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/create">
+        <Create />
+      </Route>
+      </Switch>
+        
+        </div>
 
-    </div>
+      </div>
+    </Router>
   );
 }
 
